@@ -2,20 +2,20 @@
 
 
 ### Contents
-[General Notes](#general-notes)
-[L-12 PRJDATA.ZDT Project File Layout](#l-12-prjdata.zdt-project-file-layout)
-[L-20 L20PRJDATA.ZDT Project File Layout](#l-20-l20prjdata.zdt-project-file-layout)
-[Param Values](#param-values)
-[L-20 Effect 1 Types](#l-20-effect-1-types)
-[L-20 Effect 2 Types](#l-20-effect-2-types)
-[L-12 Effect Types with Mapping to L-20 Effect Type](#l-12-effect-types-with-mapping-to-l-20-effect-type)
+- [General Notes](#general-notes)
+- [L-12 PRJDATA.ZDT Project File Layout](#l-12-prjdata.zdt-project-file-layout)
+- [L-20 L20PRJDATA.ZDT Project File Layout](#l-20-l20prjdata.zdt-project-file-layout)
+- [Param Values](#param-values)
+- [L-20 Effect 1 Types](#l-20-effect-1-types)
+- [L-20 Effect 2 Types](#l-20-effect-2-types)
+- [L-12 Effect Types with Mapping to L-20 Effect Type](#l-12-effect-types-with-mapping-to-l-20-effect-type)
 
 
 ## General Notes
-L-12 PRJDATA.ZDT: Binary file with fixed size of 4824 bytes
-L-20 L20PRJDATA.ZDT: Binary file with fixed size of 6192 bytes
-L-12 Stereo channels (9/10 and 11/12) treated like single mono channels
-L-20 Stereo channels (17/18 and 19/20) treated as explicit pair of mono channels, with most settings duplicated in both channels including channel name
+- L-12 PRJDATA.ZDT: Binary file with fixed size of 4824 bytes
+- L-20 L20PRJDATA.ZDT: Binary file with fixed size of 6192 bytes
+- L-12 Stereo channels (9/10 and 11/12) treated like single mono channels
+- L-20 Stereo channels (17/18 and 19/20) treated as explicit pair of mono channels, with most settings duplicated in both channels including channel name
 
 
 Common to both:
@@ -29,7 +29,7 @@ Common to both:
 - header of 48 bytes (`ZOOM L-12    PROJECT DATA VER0002              \0`)
 - channel states (mute, level, pan, ...)
     - channel data offsets
-	    channel 1 at 0x30
+	channel 1 at 0x30
     	channel 2 at 0x60
     	channel 3 at 0x90
     	channel 4 at 0xC0
@@ -306,7 +306,7 @@ Common to both:
 - marker count at 0xFE4
 -
 - channel play states
-	channel 1 play state (0, 1) at 0xFE9
+  	channel 1 play state (0, 1) at 0xFE9
 	channel 2 play state (0, 1) at 0xFEA
 	channel 3 play state (0, 1) at 0xFEB
 	channel 4 play state (0, 1) at 0xFEC
