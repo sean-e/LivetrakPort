@@ -1,10 +1,10 @@
 # LivetrakPort
 
 ### Contents
-[Overview](#overview)
-[Command Line Parameters](#command-line-parameters)
-[Batch File Usage](#batch-file-usage)
-[L-12 to L-20 Migration Notes](#l-12-to-l-20-migration-notes)
+- [Overview](#overview)
+- [Command Line Parameters](#command-line-parameters)
+- [Batch File Usage](#batch-file-usage)
+- [L-12 to L-20 Migration Notes](#l-12-to-l-20-migration-notes)
 
 ## Overview
 
