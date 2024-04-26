@@ -28,13 +28,14 @@ A default L-20 project file is included with LivetrakPort, though you can use yo
 
 Optional command-line params:
 - `-m=[rcx]` L-12 stereo track migration: (r)ename files, (c)opy files, (x)ignore files (default)
-If `-m=c` is specified, then the L-12 track files named `TRACK09_10.WAV` and `TRACK11_12.WAV` will be copied to files named `TRACK17_18.WAV` and `TRACK19_20.WAV` for the L-20 to load.  The L-12 will continue to be able to load media for channel 9/10 and 11/12.  The copy can be time-consuming depending on your media.
-If `-m=r` is specified, then the L-12 track files named `TRACK09_10.WAV` and `TRACK11_12.WAV` will be renamed to `TRACK17_18.WAV` and `TRACK19_20.WAV` for the L-20 to load.  The L-12 will no longer see media for channel 9/10 and 11/12.
-If `-m=x` is specified, then the L-20 will not see any media for channels 17/18 and 19/20 unless files were already there before `x` was specified.  This option exists for cases where you want to rerun the port multiple times by deleting generated L-20 project files, and not having to deal with the stereo tracks over and over again.
+  - If `-m=c` is specified, then the L-12 track files named `TRACK09_10.WAV` and `TRACK11_12.WAV` will be copied to files named `TRACK17_18.WAV` and `TRACK19_20.WAV` for the L-20 to load.  The L-12 will continue to be able to load media for channel 9/10 and 11/12.  The copy can be time-consuming depending on your media.
+  - If `-m=r` is specified, then the L-12 track files named `TRACK09_10.WAV` and `TRACK11_12.WAV` will be renamed to `TRACK17_18.WAV` and `TRACK19_20.WAV` for the L-20 to load.  The L-12 will no longer see media for channel 9/10 and 11/12.
+  - If `-m=x` is specified, then the L-20 will not see any media for channels 17/18 and 19/20 unless files were already there before `x` was specified.  This option exists for cases where you want to rerun the port multiple times by deleting generated L-20 project files, and not having to deal with the stereo tracks over and over again.
 - `-rX=NewName` Rename L-20 channel (where X is a value from 1 to 20) to `NewName` (maximum of 8 characters).  This is an alternative to baking channel names into the `L20TemplateProjectFile`.
 
-Example usage:	
-`LivetrakPort -t=d:\temp\L20default.zdt -s=f:\folder3\Song1\PRJDATA.ZDT -m=r -r1=Vox -r2=Bass -r3=Gtr1 -r4=Gtr2 -r5=DrumsL -r6=DrumsR`
+Example usage:
+
+`LivetrakPort.exe -t=d:\temp\L20default.zdt -s=f:\folder3\Song1\PRJDATA.ZDT -m=r -r1=Vox -r2=Bass -r3=Gtr1 -r4=Gtr2 -r5=DrumsL -r6=DrumsR`
 
 ## Batch File Usage
 
@@ -42,19 +43,19 @@ Rather than run the executable directly, use the batch file to process multiple 
 
 Before using the included batch file `portlivetrak.bat`, modify the `set` statements in the batch file.
 
-`LivetrakPortExe` should point to the downloaded executable
-`L20Template` should point to either the downloaded L-20 project file or your own default L-20 project file
-`RenameArgs` can be blank or you can specify channel names
-`StereoTracks` decide whether your want to copy, rename or ignore stereo media (this only affects the track media files, not the channel settings migration)
+- `LivetrakPortExe` should point to the downloaded executable
+- `L20Template` should point to either the downloaded L-20 project file or your own default L-20 project file
+- `RenameArgs` can be blank or you can specify channel names
+- `StereoTracks` decide whether your want to copy, rename or ignore stereo media (this only affects the track media files, not the channel settings migration)
 
 Use `del /s L20PRJDATA.ZDT` if you want to rerun the port with different arguments.
 If you copied or renamed the stereo tracks in the first run, then you can use the ignore (x) option for subsequents reruns.
 
 
 Example usage:	
-`f:` assuming media card is mounted as F:
-`cd folder01` to process all projects in the first folder
-`yourinstallpath\portlivetrak.bat` call the batch file; it will descend into every project directory in FOLDER01
+1. `f:` assuming media card is mounted as F:
+2. `cd folder01` to process all projects in the first folder
+3. `yourinstallpath\portlivetrak.bat` call the batch file; it will descend into every project directory in FOLDER01
 
 ## L-12 to L-20 Migration Notes
 
