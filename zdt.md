@@ -3,8 +3,8 @@
 
 ### Contents
 - [General Notes](#general-notes)
-- [L-12 PRJDATA.ZDT Project File Layout](#l-12-prjdata.zdt-project-file-layout)
-- [L-20 L20PRJDATA.ZDT Project File Layout](#l-20-l20prjdata.zdt-project-file-layout)
+- [L-12 PRJDATA.ZDT Project File Layout](#l-12-prjdatazdt-project-file-layout)
+- [L-20 L20PRJDATA.ZDT Project File Layout](#l-20-l20prjdatazdt-project-file-layout)
 - [Param Values](#param-values)
 - [L-20 Effect 1 Types](#l-20-effect-1-types)
 - [L-20 Effect 2 Types](#l-20-effect-2-types)
