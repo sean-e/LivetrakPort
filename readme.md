@@ -22,8 +22,7 @@ LivetrakPort is intended to be executed via a batch file from a command-line ope
 ## Command Line Parameters
 
 Required command-line params:
-- `-t=L20TemplateProjectFile` Full path of default L-20 project file
-A default L-20 project file is included with LivetrakPort, though you can use your own.  The default project file has all channels muted by default.  If you port a full L-12 session, then channels 1-8 will be unmuted (assuming they were unmuted in the L-12 project), while channels 9-16 will be muted.  L-20 channels 17-20 will be unmuted (assuming channels 9/10 and 11/12 were unmuted in the L-12 project).
+- `-t=L20TemplateProjectFile` Full path of default L-20 project file.  A default L-20 project file is included with LivetrakPort, though you can use your own.  The default project file has all channels muted by default.  If you port a full L-12 session, then channels 1-8 will be unmuted (assuming they were unmuted in the L-12 project), while channels 9-16 will be muted.  L-20 channels 17-20 will be unmuted (assuming channels 9/10 and 11/12 were unmuted in the L-12 project).
 - `-s=L12sourceProjectFile` Full path of L-12 file to port to L-20
 
 Optional command-line params:
@@ -49,7 +48,7 @@ Before using the included batch file `portlivetrak.bat`, modify the `set` statem
 - `StereoTracks` decide whether your want to copy, rename or ignore stereo media (this only affects the track media files, not the channel settings migration)
 
 Use `del /s L20PRJDATA.ZDT` if you want to rerun the port with different arguments.
-If you copied or renamed the stereo tracks in the first run, then you can use the ignore (x) option for subsequents reruns.
+If you copied or renamed the stereo tracks in the first run, then you can use the ignore (x) option for subsequent reruns.
 
 
 Example usage:	
